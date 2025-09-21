@@ -113,7 +113,7 @@
 /* Canvas specific styles */
 .canvas-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(10, 1fr);
   grid-template-rows: 1fr 1fr 1fr;
   gap: 0.25rem;
   height: calc(100vh - 200px);
@@ -136,15 +136,15 @@
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
 }
 
-.block-key-partners { grid-area: 1 / 1 / 3 / 2; }
-.block-key-activities { grid-area: 1 / 2 / 2 / 3; }
-.block-value-propositions { grid-area: 1 / 3 / 3 / 4; }
-.block-customer-relationships { grid-area: 1 / 4 / 2 / 5; }
-.block-customer-segments { grid-area: 1 / 5 / 3 / 6; }
-.block-key-resources { grid-area: 2 / 2 / 3 / 3; }
-.block-channels { grid-area: 2 / 4 / 3 / 5; }
-.block-cost-structure { grid-area: 3 / 1 / 4 / 3; }
-.block-revenue-streams { grid-area: 3 / 3 / 4 / 6; }
+.block-key-partners { grid-area: 1 / 1 / 3 / 3; }
+.block-key-activities { grid-area: 1 / 3 / 2 / 5; }
+.block-value-propositions { grid-area: 1 / 5 / 3 / 7; }
+.block-customer-relationships { grid-area: 1 / 7 / 2 / 9; }
+.block-customer-segments { grid-area: 1 / 9 / 3 / 11; }
+.block-key-resources { grid-area: 2 / 3 / 3 / 5; }
+.block-channels { grid-area: 2 / 7 / 3 / 9; }
+.block-cost-structure { grid-area: 3 / 1 / 4 / 6; }
+.block-revenue-streams { grid-area: 3 / 6 / 4 / 11; }
 
 .item-tag {
   background: hsl(var(--accent));
