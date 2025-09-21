@@ -87,15 +87,15 @@ export default function Canvas() {
   };
 
   const blockConfigs = [
-    { blockType: "key-partners" as BlockType, title: "Partenaires Clés", icon: "handshake", className: "block-key-partners" },
+    { blockType: "key-partners" as BlockType, title: "Partenaires clés", icon: "handshake", className: "block-key-partners" },
     { blockType: "key-activities" as BlockType, title: "Activités Clés", icon: "cogs", className: "block-key-activities" },
-    { blockType: "value-propositions" as BlockType, title: "Propositions de Valeur", icon: "gem", className: "block-value-propositions" },
-    { blockType: "customer-relationships" as BlockType, title: "Relations Client", icon: "heart", className: "block-customer-relationships" },
-    { blockType: "customer-segments" as BlockType, title: "Segments Client", icon: "users", className: "block-customer-segments" },
-    { blockType: "key-resources" as BlockType, title: "Ressources Clés", icon: "box", className: "block-key-resources" },
+    { blockType: "value-propositions" as BlockType, title: "Propositions de valeur", icon: "gem", className: "block-value-propositions" },
+    { blockType: "customer-relationships" as BlockType, title: "Relation Client", icon: "heart", className: "block-customer-relationships" },
+    { blockType: "customer-segments" as BlockType, title: "Clients", icon: "users", className: "block-customer-segments" },
+    { blockType: "key-resources" as BlockType, title: "Ressources clés", icon: "box", className: "block-key-resources" },
     { blockType: "channels" as BlockType, title: "Canaux", icon: "share-alt", className: "block-channels" },
-    { blockType: "cost-structure" as BlockType, title: "Structure de Coûts", icon: "calculator", className: "block-cost-structure" },
-    { blockType: "revenue-streams" as BlockType, title: "Flux de Revenus", icon: "money-bill-wave", className: "block-revenue-streams" }
+    { blockType: "cost-structure" as BlockType, title: "Coûts", icon: "calculator", className: "block-cost-structure" },
+    { blockType: "revenue-streams" as BlockType, title: "Revenus", icon: "money-bill-wave", className: "block-revenue-streams" }
   ];
 
   return (

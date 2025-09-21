@@ -143,7 +143,7 @@
 .block-key-resources { grid-area: 2 / 2 / 3 / 3; }
 .block-channels { grid-area: 2 / 4 / 3 / 5; }
 .block-cost-structure { grid-area: 3 / 1 / 4 / 3; }
-.block-revenue-streams { grid-area: 3 / 4 / 4 / 6; }
+.block-revenue-streams { grid-area: 3 / 3 / 4 / 6; }
 
 .item-tag {
   background: hsl(var(--accent));
