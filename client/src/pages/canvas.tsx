@@ -4,7 +4,7 @@ import { CanvasStorage } from "@/lib/canvas-storage";
 import { CanvasBlock } from "@/components/canvas-block";
 import { AddItemModal } from "@/components/add-item-modal";
 import { useToast } from "@/hooks/use-toast";
-import { Download, Trash2, TrendingUp } from "lucide-react";
+import { Download, Trash2, TrendingUp, Upload } from "lucide-react";
 
 export default function Canvas() {
   const [canvasData, setCanvasData] = useState<CanvasData>(CanvasStorage.getEmptyCanvas());
@@ -86,6 +86,30 @@ export default function Canvas() {
     }
   };
 
+  const importData = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+
+    const result = await CanvasStorage.importData(file);
+    
+    if (result.success && result.data) {
+      setCanvasData(result.data);
+      toast({
+        title: "Import réussi",
+        description: "Les données ont été importées avec succès",
+      });
+    } else {
+      toast({
+        title: "Erreur d'import",
+        description: result.error || "Une erreur est survenue lors de l'import",
+        variant: "destructive",
+      });
+    }
+    
+    // Reset the input value to allow re-importing the same file
+    event.target.value = '';
+  };
+
   const blockConfigs = [
     { blockType: "key-partners" as BlockType, title: "Partenaires clés", icon: "handshake", className: "block-key-partners" },
     { blockType: "key-activities" as BlockType, title: "Activités Clés", icon: "cogs", className: "block-key-activities" },
@@ -108,6 +132,22 @@ export default function Canvas() {
               Business Model Canvas
             </h1>
             <div className="flex gap-3">
+              <div className="relative">
+                <input
+                  type="file"
+                  accept=".json"
+                  onChange={importData}
+                  className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                  data-testid="import-input"
+                />
+                <button
+                  className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors flex items-center gap-2"
+                  data-testid="import-button"
+                >
+                  <Upload className="w-4 h-4" />
+                  Importer JSON
+                </button>
+              </div>
               <button
                 onClick={clearAllData}
                 className="bg-secondary text-secondary-foreground px-4 py-2 rounded-lg hover:bg-muted transition-colors flex items-center gap-2"

@@ -56,4 +56,28 @@ export class CanvasStorage {
   static clearAllData(): void {
     localStorage.removeItem(STORAGE_KEY);
   }
+
+  static async importData(file: File): Promise<{ success: boolean; data?: CanvasData; error?: string }> {
+    try {
+      const text = await file.text();
+      const parsed = JSON.parse(text);
+      const validatedData = canvasDataSchema.parse(parsed);
+      
+      this.saveData(validatedData);
+      
+      return { success: true, data: validatedData };
+    } catch (error) {
+      console.error("Error importing canvas data:", error);
+      
+      if (error instanceof SyntaxError) {
+        return { success: false, error: "Fichier JSON invalide" };
+      }
+      
+      if (error instanceof Error && error.message.includes("validation")) {
+        return { success: false, error: "Le format des données ne correspond pas au schéma attendu" };
+      }
+      
+      return { success: false, error: "Erreur lors de l'import du fichier" };
+    }
+  }
 }

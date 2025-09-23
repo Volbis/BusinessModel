@@ -1,0 +1,105 @@
+{
+  "key-partners": [
+    {
+      "id": "kp1",
+      "text": "Fournisseurs de matières premières",
+      "blockType": "key-partners"
+    },
+    {
+      "id": "kp2", 
+      "text": "Partenaires technologiques",
+      "blockType": "key-partners"
+    }
+  ],
+  "key-activities": [
+    {
+      "id": "ka1",
+      "text": "Développement produit",
+      "blockType": "key-activities"
+    },
+    {
+      "id": "ka2",
+      "text": "Marketing et vente",
+      "blockType": "key-activities"
+    }
+  ],
+  "value-propositions": [
+    {
+      "id": "vp1",
+      "text": "Solution innovante et écologique",
+      "blockType": "value-propositions"
+    },
+    {
+      "id": "vp2",
+      "text": "Service client 24/7",
+      "blockType": "value-propositions"
+    }
+  ],
+  "customer-relationships": [
+    {
+      "id": "cr1",
+      "text": "Support personnalisé",
+      "blockType": "customer-relationships"
+    }
+  ],
+  "customer-segments": [
+    {
+      "id": "cs1",
+      "text": "Entreprises B2B",
+      "blockType": "customer-segments"
+    },
+    {
+      "id": "cs2",
+      "text": "Consommateurs écologiques",
+      "blockType": "customer-segments"
+    }
+  ],
+  "key-resources": [
+    {
+      "id": "kr1",
+      "text": "Équipe de développement",
+      "blockType": "key-resources"
+    },
+    {
+      "id": "kr2",
+      "text": "Brevets et propriété intellectuelle",
+      "blockType": "key-resources"
+    }
+  ],
+  "channels": [
+    {
+      "id": "ch1",
+      "text": "Site web e-commerce",
+      "blockType": "channels"
+    },
+    {
+      "id": "ch2",
+      "text": "Réseaux sociaux",
+      "blockType": "channels"
+    }
+  ],
+  "cost-structure": [
+    {
+      "id": "cost1",
+      "text": "Coûts de développement R&D",
+      "blockType": "cost-structure"
+    },
+    {
+      "id": "cost2",
+      "text": "Frais de marketing",
+      "blockType": "cost-structure"
+    }
+  ],
+  "revenue-streams": [
+    {
+      "id": "rev1",
+      "text": "Vente de produits",
+      "blockType": "revenue-streams"
+    },
+    {
+      "id": "rev2",
+      "text": "Abonnements premium",
+      "blockType": "revenue-streams"
+    }
+  ]
+}
